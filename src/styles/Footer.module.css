@@ -1,0 +1,23 @@
+.footerFlexContainer{
+    display:flex;
+    flex-direction: row;
+    align-items: top;
+    margin: 0 auto;
+    padding: 167px 64px 190px 0px;
+}
+
+.footerFlexContainer > div{
+    width:20%;
+    margin:0;
+}
+
+footer h6{
+    text-transform: uppercase;
+    margin-top:0;
+}
+footer a{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom:10px;
+}

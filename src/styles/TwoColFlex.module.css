@@ -1,0 +1,15 @@
+.flex50{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 167px 64px 190px 0px;
+}
+
+.flex50 > div{
+    width:50%;
+    margin:0;
+}
+
+

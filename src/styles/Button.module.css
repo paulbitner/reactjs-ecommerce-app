@@ -1,0 +1,13 @@
+.button{
+    padding: 16px 80px;
+    text-transform: uppercase;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:600;
+    font-size:16px;
+    letter-spacing:3px;
+}
+
+.button:hover{
+    opacity:0.85;
+}

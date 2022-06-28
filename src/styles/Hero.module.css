@@ -1,0 +1,25 @@
+.hero{
+    width:100%;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height:82vh;
+    
+}
+
+.mainBannerTextContainer{
+    color:white;
+}
+
+.mainBannerWithTextTitle{
+    max-width: 420px;
+    padding-top:120px;
+    margin-top: 0;
+}
+
+.mainBannerWithTextBody{
+    max-width: 280px;
+    margin-bottom:36px;
+    line-height: 30px;
+    font-size: 20px;
+}

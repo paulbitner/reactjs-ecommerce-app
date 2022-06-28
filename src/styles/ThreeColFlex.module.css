@@ -1,0 +1,11 @@
+.flex33{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    width:100%;
+}
+
+.flex33 > div{
+    width:33.33333%;
+    margin:0;
+}

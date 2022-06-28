@@ -1,0 +1,18 @@
+.utilityBar{
+    background-color:#f5f1f1;
+    color:white;
+    text-align: right;
+    padding:10px;
+}
+
+.utilityBarContent nav a{
+    color: #3e3837;
+    margin-left:10px;
+    text-decoration: none;
+    transition:0.3;
+    font-size:14px;
+}
+
+.utilityBarContent nav a:hover{
+    color: #ae867a;
+}

@@ -1,0 +1,21 @@
+.partners {
+  background-color: #f2faf5;
+  padding:80px 0;
+}
+
+.partnersFlex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.partnersFlex > div {
+  width: 16.6666666667%;
+}
+
+.partnersFlex > div > img {
+    width: 70%;
+    display:block;
+    margin:0 auto;
+    height:auto;
+  }

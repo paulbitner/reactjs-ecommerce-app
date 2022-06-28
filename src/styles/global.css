@@ -1,0 +1,77 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 55px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+h4 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+h5 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+h6 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+p {
+  margin-bottom: 30px;
+  line-height: 1.5;
+  font-size: 20px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.imageWithText {
+  margin-right: 30px;
+  width: 50vw;
+  max-width: 492px;
+}
+
+.imageWithTextContentContainer {
+  max-width: 440px;
+  text-align: left;
+  padding-left:60px;
+}
+
+.alignLeft {
+  text-align: left;
+}
+
+.alignRight {
+  text-align: right;
+}
+
+footer{
+  background-color: #000
+}
