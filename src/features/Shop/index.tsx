@@ -1,33 +1,25 @@
 import React from "react";
-import style from 'styles/SiteHeaderMain.module.css';
+import style from "styles/SiteHeaderMain.module.css";
 import MaxContentWidth from "components/Layout/MaxWidthContainer";
-import { Table } from "components/Table";
-import { TShop } from './types';
+import ShopGrid from "./components/ShopGrid";
 
-
-
-import { useShop } from './api/getShop';
-
+import { useGroups } from "./api/getShop";
 
 const Shop = () => {
-  const shopQuery = useShop();
-    
+  const shopQuery = useGroups();
+
   if (shopQuery.isLoading) {
-    return (
-      <div>Loading products...</div>
-    );
+    return <div>Loading products...</div>;
   }
 
-  if (!shopQuery.data) return(
-    <div>Error: API server is offline</div>
-  )
-
-  console.log(shopQuery.data);
-
+  if (!shopQuery.data) return <div>Error: API server is offline</div>;
   return (
-    <span>*Loop over array data here*</span>
+    <>
+      <MaxContentWidth>
+        <ShopGrid data={shopQuery.data} />
+      </MaxContentWidth>
+    </>
   );
- 
 };
 
 export default Shop;

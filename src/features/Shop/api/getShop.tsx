@@ -1,26 +1,19 @@
+import React, { useEffect } from "react";
 
-import { useQuery } from 'react-query';
-import { ExtractFnReturnType, QueryConfig } from 'lib/react-query';
+import { useQuery, UseQueryOptions } from "react-query";
 
+import axios, { AxiosError } from "axios";
 
-import axios from 'axios';
+import { Product } from "../types";
 
-import { TShop } from '../types';
+function fetchGroups(): Promise<Product[]> {
+  return axios
+    .get(`http://localhost:5000/shop`)
+    .then((response) => response.data);
+}
 
-export const getProducts = (): Promise<TShop[]> => {
-  return axios.get(`http://localhost:5000/shop`);
-};
-
-type QueryFnType = typeof getProducts;
-
-type useShopOptions = {
-  config?: QueryConfig<QueryFnType>;
-};
-
-export const useShop = ({ config }: useShopOptions = {}) => {
-  return useQuery<ExtractFnReturnType<QueryFnType>>({
-    ...config,
-    queryKey: ['users'],
-    queryFn: () => getProducts(),
-  });
-};
+export function useGroups<TData = Product>(
+  options?: UseQueryOptions<Product, AxiosError, TData>
+) {
+  return useQuery("shop", fetchGroups);
+}

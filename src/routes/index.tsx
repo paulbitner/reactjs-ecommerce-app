@@ -4,6 +4,7 @@ import NotFound from 'components/NotFound'
 import MainLayout from 'components/Layout/MainLayout';
 import Shop from 'features/Shop';
 import Checkout from 'components/Checkout';
+import SingleProduct from 'features/SingleProduct';
 
 
 
@@ -15,6 +16,8 @@ export const AppRoutes = () => {
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
           <Route path="shop" element={<Shop />} />
+          <Route path="shop/:slug" element={<SingleProduct />} />
+
           <Route path="checkout" element={<Checkout />} />
           <Route path="*" element={<NotFound />} />
         </Route>
