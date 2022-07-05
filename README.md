@@ -1,3 +1,3 @@
-# Getting Started with Create React App
+# react.js ecommerce app
 
 postgreSQL super admin password: superpassword
