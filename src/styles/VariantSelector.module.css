@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 16px;
+  margin-bottom:30px;
 }
 
 .singleVariantContainer {
@@ -46,4 +47,11 @@
     margin:20px 0;
     font-size: 14px;
     line-height: 24px;
+}
+
+.price{
+  font-size: 14px;
+  line-height: 24px;
+  color: #8e8e8e;
+  margin: 20px 0 10px 5px;
 }

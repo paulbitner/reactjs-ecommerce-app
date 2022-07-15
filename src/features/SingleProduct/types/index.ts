@@ -13,4 +13,5 @@ export type TSingleProduct = {
     variantImage: string;
     variantName: string;
     variantPrice: string;
+    quantity?: number | undefined;
   }

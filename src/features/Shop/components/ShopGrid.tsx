@@ -10,14 +10,15 @@ type ShopGridProps = {
 
 const ShopGrid = (props: ShopGridProps) => {
   return (
-    <>
-      <h1>All Products: {props.data.length}</h1>
+    <div className={styles.grid}>
+      <h3 className={styles.productCount}>All Products: {props.data.length}</h3>
+      
       <ThreeColFlex>
       {props.data.map((product: Product, index: number) => (
-        <ProductCard productName={product.productname} productPrice={product.productPrice} />
+        <ProductCard productData={product} />
       ))}
       </ThreeColFlex>
-    </>
+    </div>
   );
 };
 

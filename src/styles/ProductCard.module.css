@@ -1,3 +1,31 @@
 .productCard{
-    border:1px solid grey;
+    border:0px solid grey;
+    text-align: center;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.productCard img{
+    transition:0.3s;
+}
+
+.productCard:hover img{
+    opacity:0.75;
+}
+
+.productCardImage{
+    max-height:200px;
+    width:auto;
+    display:block;
+    margin:0 auto;
+}
+
+.productCardTitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 10px 0 20px 0;
+    line-height: 1;
+    letter-spacing: normal;
+    text-decoration: none;
 }

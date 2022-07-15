@@ -1,12 +1,22 @@
 .button{
-    padding: 16px 80px;
     text-transform: uppercase;
     cursor:pointer;
-    transition:0.3s;
+    transition: opacity 0.3s;
     font-weight:600;
-    font-size:16px;
     letter-spacing:3px;
 }
+
+.buttonSmall{
+    padding: 12px 30px;
+    font-size:12px;
+}
+
+
+.buttonLarge{
+    padding: 16px 80px;
+    font-size:16px;
+}
+
 
 .button:hover{
     opacity:0.85;
