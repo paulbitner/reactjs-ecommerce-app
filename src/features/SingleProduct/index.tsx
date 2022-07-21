@@ -8,12 +8,15 @@ import VariantSelector from "./components/VariantSelector";
 import Button from "components/Button";
 import { useAppSelector, useAppDispatch } from "hooks";
 import { addProductToCart, selectCart } from "stores/cartSlice";
+import { openCartModal, selectModal } from "stores/cartModalSlice";
 
 /* Uses slug in URL to fetch the product data from the API. */
 
 const SingleProduct = () => {
   const cart = useAppSelector(selectCart);
   const dispatch = useAppDispatch();
+
+  const openCart = useAppSelector(selectModal);
 
   const { slug } = useParams();
   const singleProductQuery = useSingleProduct({ slug });
@@ -34,6 +37,19 @@ const SingleProduct = () => {
     setselectedPrice(variantPrice);
     setProductImage(variantImage);
   }
+  function updateCart() {
+    dispatch(
+      addProductToCart({
+        variantID: selectedvariantID,
+        variantImage: productImage,
+        variantName: selectedvariantIDName,
+        variantPrice: selectedvariantPrice,
+        quantity: 1,
+      })
+    );
+
+    dispatch(openCartModal('open'));
+  }
 
   useEffect(() => {
     if (singleProductQuery.status === "success") {
@@ -51,6 +67,7 @@ const SingleProduct = () => {
       setProductImage(singleProductQuery.data?.productVariants[0].variantImage);
     }
   }, [singleProductQuery.status, singleProductQuery.data]);
+
 
   if (singleProductQuery.isLoading) {
     <MaxContentWidth>Loading...</MaxContentWidth>;
@@ -95,15 +112,7 @@ const SingleProduct = () => {
               />
               <div
                 onClick={() =>
-                  dispatch(
-                    addProductToCart({
-                      variantID: selectedvariantID,
-                      variantImage: productImage,
-                      variantName: selectedvariantIDName,
-                      variantPrice: selectedvariantPrice,
-                      quantity: 1,
-                    })
-                  )
+                  updateCart()
                 }
               >
                 {" "}

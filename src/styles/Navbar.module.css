@@ -1,0 +1,11 @@
+.navLink a{
+    text-decoration: none;
+    color: #3e3837;
+    font-weight:600;
+    transition:0.3s;
+    margin:15px;
+}
+
+.navLink a:hover{
+    color:#ae867a
+}

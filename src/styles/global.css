@@ -61,7 +61,7 @@ img {
 .imageWithTextContentContainer {
   max-width: 440px;
   text-align: left;
-  padding-left:60px;
+  padding-left: 60px;
 }
 
 .alignLeft {
@@ -72,6 +72,18 @@ img {
   text-align: right;
 }
 
-footer{
-  background-color: #000
+footer {
+  background-color: #000;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.pt100 {
+  padding-top: 100px;
+}
+
+.pb100 {
+  padding-bottom: 100px;
 }

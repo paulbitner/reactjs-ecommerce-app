@@ -1,9 +1,14 @@
 import React from 'react'
+import MaxContentWidth from './Layout/MaxWidthContainer';
+import Heading from './Layout/Heading';
 
 const NotFound = () => {
 
     return (
-        <h1>404</h1>
+        <MaxContentWidth>
+            <Heading size="h1" text="Coming Soon!" class="textCenter pt100 pb100" />
+        </MaxContentWidth>
+        
     )
 };
 

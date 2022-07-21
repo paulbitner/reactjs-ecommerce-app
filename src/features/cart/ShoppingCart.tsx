@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import style from "styles/ShoppingCart.module.css";
 import ThreeColFlex from "components/Layout/ThreeColFlex";
 import CartIcon from "components/CartIcon";
@@ -7,9 +7,12 @@ import Button from "components/Button";
 import { useAppSelector, useAppDispatch } from "hooks";
 import { addProductToCart, selectCart, updateQuantity } from "stores/cartSlice";
 import { Variant } from "features/SingleProduct/types";
+import { openCartModal, selectModal } from "stores/cartModalSlice";
 
 const ShoppingCart = () => {
   const cart = useAppSelector(selectCart);
+  const openCart = useAppSelector(selectModal);
+
   const dispatch = useAppDispatch();
 
   const [openModal, setOpenModal] = useState(false);
@@ -18,17 +21,32 @@ const ShoppingCart = () => {
     setOpenModal(!openModal);
   };
 
+  useEffect(() => {
+    if (cart.length >= 0) localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
+
+  useEffect(() => {
+    
+    if(!openCart){
+      setOpenModal(false)
+    }
+
+    if(openCart){
+      setOpenModal(true);
+    }
+  }, [openCart]);
+
   return (
     <div className={style.shoppingCart}>
       <div
-        onClick={toggleModal}
+        onClick={() => dispatch(openCartModal('close'))}
         className={style.cartOverlay}
         style={{
           opacity: openModal ? "1" : "0",
           visibility: openModal ? "visible" : "hidden",
         }}
       ></div>
-      <div onClick={toggleModal}>
+      <div onClick={() => dispatch(openCartModal('open'))}>
         <CartIcon quantity={cart.length} />
       </div>
       <div
@@ -43,7 +61,7 @@ const ShoppingCart = () => {
             <CartIcon quantity={cart.length} />
           </div>
           <div className={style.cartContainerHeading}>Shopping Bag</div>
-          <div onClick={toggleModal} className={style.cartContainerClose}>
+          <div onClick={() => dispatch(openCartModal('close'))} className={style.cartContainerClose}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="29"
@@ -106,7 +124,6 @@ const ShoppingCart = () => {
                 >
                   +
                 </a>
-               
               </div>
             </div>
           </div>

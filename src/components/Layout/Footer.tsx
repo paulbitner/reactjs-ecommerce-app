@@ -13,26 +13,26 @@ const Footer = (props: FooterProps) => {
       
         <div className={style.footerFlexContainer}>
         <SiteLogo version="white" />
-          <div>
+          <div className={style.footerLinkContainer}>
             <Heading size="h6" color="white" text="Company" />
             <Link to="about">About Neuro</Link>
             <Link to="about">Why Neuro</Link>
             <Link to="about">Blog</Link>
           </div>
-          <div>
+          <div className={style.footerLinkContainer}>
             <Heading size="h6" color="white" text="Shop" />
             <Link to="about">Shop Neuro</Link>
             <Link to="about">Shop Merchandise</Link>
             <Link to="about">Store Locator</Link>
             <Link to="#">Wholesale</Link>
           </div>
-          <div>
+          <div className={style.footerLinkContainer}>
             <Heading size="h6" color="white" text="Partner" />
             <Link to="about">About Neuro</Link>
             <Link to="about">Why Neuro</Link>
             <Link to="about">Blog</Link>
           </div>
-          <div>
+          <div className={style.footerLinkContainer}>
             <Heading size="h6" color="white" text="Support" />
             <Link to="about">About Neuro</Link>
             <Link to="about">Why Neuro</Link>
