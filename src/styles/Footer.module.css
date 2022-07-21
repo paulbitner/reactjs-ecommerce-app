@@ -15,7 +15,7 @@ footer h6{
     text-transform: uppercase;
     margin-top:0;
 }
-footer a{
+footer .footerLinkContainer a{
     display: block;
     color: #fff;
     text-decoration: none;

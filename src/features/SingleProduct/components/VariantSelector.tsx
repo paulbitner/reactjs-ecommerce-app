@@ -19,14 +19,14 @@ const VariantSelector = (props: VariantSelectorProps) => {
           <div key={variant.variantID} className={style.singleVariantContainer} data-id={variant.variantID}>
             <div>
               <div
-                 onClick={() => props.setVariant(variant.variantID, variant.variantName)} className={props.selectedVariantID === variant.variantID ? `${style.productFormSelectorRadio} ${style.selected}` : `${style.productFormSelectorRadio}`}
+                 onClick={() => props.setVariant(variant.variantID, variant.variantName, variant.variantImage, variant.variantPrice)} className={props.selectedVariantID === variant.variantID ? `${style.productFormSelectorRadio} ${style.selected}` : `${style.productFormSelectorRadio}`}
               >
                 <div
                   className={props.selectedVariantID === variant.variantID ? `${style.productFormSelectorRadioInner} ${style.selected}` : `${style.productFormSelectorRadioInner}`}
                 ></div>
               </div>
             </div>
-            <div>{variant.variantName}</div>
+            <div>{variant.variantName} <span className={style.price}> - ${variant.variantPrice}</span></div>
           </div>
         ))}
       </div>
