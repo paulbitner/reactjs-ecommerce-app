@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ba2880d3.css",
+    "main.js": "/static/js/main.5b09dd21.js",
+    "static/js/787.0d1bce8a.chunk.js": "/static/js/787.0d1bce8a.chunk.js",
+    "static/media/neuro_head.gif": "/static/media/neuro_head.9ae91afec9c0a79bffca.gif",
+    "static/media/the_zone_gif.gif": "/static/media/the_zone_gif.9d477a7ebe1ef93f842f.gif",
+    "static/media/homepageHero.webp": "/static/media/homepageHero.48e2dd1a65fca3669492.webp",
+    "static/media/mints_blue.png": "/static/media/mints_blue.e21e7cb7565c4ade2e2e.png",
+    "static/media/neuro_bottom_hero.webp": "/static/media/neuro_bottom_hero.50fa47c7ff9216379108.webp",
+    "static/media/mints_red.png": "/static/media/mints_red.32ea89525c307adf1fb1.png",
+    "static/media/mints_honey_lemon.png": "/static/media/mints_honey_lemon.2e00796711c83f279905.png",
+    "static/media/Neuro_Home_IdealstateMints.webp": "/static/media/Neuro_Home_IdealstateMints.8dedcd35a9a253a388db.webp",
+    "static/media/amazon.png": "/static/media/amazon.2b9f79cc3f4573d5b712.png",
+    "static/media/logo-black.svg": "/static/media/logo-black.f872787eceebb532ae757d5d9302cbdd.svg",
+    "static/media/logo-white.svg": "/static/media/logo-white.0b15604a6e9bfe81f4cfe5ceab12e1a1.svg",
+    "index.html": "/index.html",
+    "main.ba2880d3.css.map": "/static/css/main.ba2880d3.css.map",
+    "main.5b09dd21.js.map": "/static/js/main.5b09dd21.js.map",
+    "787.0d1bce8a.chunk.js.map": "/static/js/787.0d1bce8a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ba2880d3.css",
+    "static/js/main.5b09dd21.js"
+  ]
+}
