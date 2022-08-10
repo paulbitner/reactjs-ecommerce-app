@@ -3,7 +3,7 @@ import style from "styles/ShoppingCart.module.css";
 import ThreeColFlex from "components/Layout/ThreeColFlex";
 import CartIcon from "components/CartIcon";
 import TwoColFlex from "components/Layout/TwoColFlex";
-import Button from "components/Button";
+import { Button } from "components/Button";
 import { useAppSelector, useAppDispatch } from "hooks";
 import { addProductToCart, selectCart, updateQuantity } from "stores/cartSlice";
 import { Variant } from "features/SingleProduct/types";
@@ -26,12 +26,11 @@ const ShoppingCart = () => {
   }, [cart]);
 
   useEffect(() => {
-    
-    if(!openCart){
-      setOpenModal(false)
+    if (!openCart) {
+      setOpenModal(false);
     }
 
-    if(openCart){
+    if (openCart) {
       setOpenModal(true);
     }
   }, [openCart]);
@@ -39,14 +38,14 @@ const ShoppingCart = () => {
   return (
     <div className={style.shoppingCart}>
       <div
-        onClick={() => dispatch(openCartModal('close'))}
+        onClick={() => dispatch(openCartModal("close"))}
         className={style.cartOverlay}
         style={{
           opacity: openModal ? "1" : "0",
           visibility: openModal ? "visible" : "hidden",
         }}
       ></div>
-      <div onClick={() => dispatch(openCartModal('open'))}>
+      <div onClick={() => dispatch(openCartModal("open"))}>
         <CartIcon quantity={cart.length} />
       </div>
       <div
@@ -61,7 +60,10 @@ const ShoppingCart = () => {
             <CartIcon quantity={cart.length} />
           </div>
           <div className={style.cartContainerHeading}>Shopping Bag</div>
-          <div onClick={() => dispatch(openCartModal('close'))} className={style.cartContainerClose}>
+          <div
+            onClick={() => dispatch(openCartModal("close"))}
+            className={style.cartContainerClose}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="29"
