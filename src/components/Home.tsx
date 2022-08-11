@@ -1,7 +1,7 @@
 import React from "react";
 import style from "style/Home.module.css";
 import Heading from "components//Layout/Heading";
-import Button from "components/Button";
+import { Button } from "components/Button";
 import Hero from "components/Hero";
 import HeroWebP from "static/homepageHero.webp";
 import BrandPartners from "components/BrandPartners";
@@ -14,7 +14,7 @@ import HoneyMints from "static/mints_honey_lemon.png";
 import WhiteMints from "static/Neuro_Home_IdealstateMints.webp";
 import NeuroGif from "static/neuro_head.gif";
 import TwoColFlex from "components/Layout/TwoColFlex";
-import BottomFooterHero from "static/neuro_bottom_hero.webp"
+import BottomFooterHero from "static/neuro_bottom_hero.webp";
 
 const Home = () => {
   return (
@@ -115,6 +115,12 @@ const Home = () => {
           </div>
         </div>
       </TwoColFlex>
+
+      <Hero
+        image={BottomFooterHero}
+        headline="Refresh your state of mind."
+        subheading=""
+      />
 
       <Hero
         image={BottomFooterHero}

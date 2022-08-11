@@ -5,6 +5,11 @@ html {
   font-family: "Montserrat", sans-serif;
 }
 
+a,
+button {
+  font-family: "Montserrat", sans-serif;
+}
+
 h1 {
   font-size: 55px;
   font-weight: 600;

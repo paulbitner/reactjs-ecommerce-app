@@ -5,7 +5,7 @@ import MaxContentWidth from "components/Layout/MaxWidthContainer";
 import { useSingleProduct } from "./api/getSingleProduct";
 import TwoColFlex from "components/Layout/TwoColFlex";
 import VariantSelector from "./components/VariantSelector";
-import Button from "components/Button";
+import { Button } from "components/Button";
 import { useAppSelector, useAppDispatch } from "hooks";
 import { addProductToCart, selectCart } from "stores/cartSlice";
 import { openCartModal, selectModal } from "stores/cartModalSlice";
@@ -48,7 +48,7 @@ const SingleProduct = () => {
       })
     );
 
-    dispatch(openCartModal('open'));
+    dispatch(openCartModal("open"));
   }
 
   useEffect(() => {
@@ -67,7 +67,6 @@ const SingleProduct = () => {
       setProductImage(singleProductQuery.data?.productVariants[0].variantImage);
     }
   }, [singleProductQuery.status, singleProductQuery.data]);
-
 
   if (singleProductQuery.isLoading) {
     <MaxContentWidth>Loading...</MaxContentWidth>;
@@ -110,11 +109,7 @@ const SingleProduct = () => {
                 selectedVariantID={selectedvariantID}
                 selectedVariantIDName={selectedvariantIDName}
               />
-              <div
-                onClick={() =>
-                  updateCart()
-                }
-              >
+              <div onClick={() => updateCart()}>
                 {" "}
                 <Button
                   value="Add to Cart"
