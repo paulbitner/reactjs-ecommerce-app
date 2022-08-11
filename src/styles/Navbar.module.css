@@ -4,6 +4,7 @@
     font-weight:600;
     transition:0.3s;
     margin:15px;
+    background-color:red;
 }
 
 .navLink a:hover{
