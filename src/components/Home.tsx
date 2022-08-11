@@ -121,6 +121,12 @@ const Home = () => {
         headline="Refresh your state of mind."
         subheading=""
       />
+
+      <Hero
+        image={BottomFooterHero}
+        headline="Refresh your state of mind."
+        subheading=""
+      />
     </>
   );
 };
