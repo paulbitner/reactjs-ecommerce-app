@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "styles/ProductCard.module.css";
 import { Link } from "react-router-dom";
-import Button from "components/Button";
+import { Button } from "components/Button";
 import { Product } from "../types/index";
 
 interface ProductCardProps {
